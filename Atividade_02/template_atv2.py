@@ -44,10 +44,10 @@ def entropia(na, nb):
     0.4394969869215134
     
     >>> entropia(0, 100)
-    0.011397802630112312
+    0.0
     
     >>> entropia(10, 0)
-    0.011397802630112312
+    0.0
     ''' 
     entropia = 1
     ### Seu código inicia aqui ###	
@@ -96,7 +96,7 @@ def shuffle_split_data(df):
     X_train, X_test, y_train, y_test, com X contendo as colunas A, B, C e D e 
     y a coluna targuet.
     Embaralhe os dados X e y com a train_test_split da biblioteca skelarn com o 
-    random_state 33 e com 25% dos dados para treino e 75% para teste.
+    random_state 33 e com 75% dos dados para treino e 25% para teste.
     
     Test
     -----------
@@ -107,7 +107,7 @@ def shuffle_split_data(df):
     (150, 4)
     
     >>> shuffle_split_data(df)[1].shape
-    (50, 5)
+    (50, 4)
     
     >>> shuffle_split_data(df)[2].shape
     (150,)
