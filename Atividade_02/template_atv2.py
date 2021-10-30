@@ -125,7 +125,7 @@ def shuffle_split_data(df):
 if __name__ == '__main__':
     print(entropia(50, 50))
     print(entropia(10, 100))
-    df = organize_data()
+    df = organize_data('data.csv')
     print(type(organize_data('data.csv')))
     print(organize_data('data.csv').shape)
     print(organize_data('data.csv').loc[1].values)
