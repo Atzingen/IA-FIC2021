@@ -1,4 +1,5 @@
 import numpy as np
+import sklearn
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
@@ -42,7 +43,7 @@ def avalia_modelo(resultados_reais, resultados_preditos):
     (0.8, 1, 0.67, 0.80) 
 
     ''' 
-    resultado = (None, None, None, None)
+    resultado = [None, None, None, None]
     ### Seu código inicia aqui ###	
     
     ### Seu código termina aqui ###
