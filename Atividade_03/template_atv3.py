@@ -36,10 +36,12 @@ def avalia_modelo(resultados_reais, resultados_preditos):
     
     Test
     -----------
-    >>> avalia_modelo([0,0,0,0,1,1,1,1,1,1], [0,0,0,1,1,1,1,1,1,1])
+    >>> avalia_modelo([0,0,0,0,1,1,1,1,1,1], 
+                      [0,0,0,1,1,1,1,1,1,1])
     (0.9, 0.86, 1.0, 0.92)
     
-    >>> avalia_modelo([0,0,0,0,1,1,1,1,1,1], [0, 0, 0, 0, 0, 1, 1, 1, 1, 1])
+    >>> avalia_modelo([0,0,0,0,1,1,1,1,1,1], 
+                      [0,0,0,0,0,0,1,1,1,1])
     (0.8, 1, 0.67, 0.80) 
 
     ''' 
@@ -57,7 +59,7 @@ def K_vizinhos_proximos(X, y, k):
     
     * Separe os dados em treino e teste, com 20% dos dados randomizados na parte de teste (random_state=137).
     
-    * Crie um classificador KNeighborsClassifier com 4 vizinhos
+    * Crie um classificador KNeighborsClassifier com k vizinhos
     
     * "treine" o classificador com o método KNeighborsClassifier.fit()
     
