@@ -63,7 +63,7 @@ def K_vizinhos_proximos(X, y, k):
     
     * "treine" o classificador com o método KNeighborsClassifier.fit()
     
-    * Efetue a predição nos dados de teste e retorne a acurária (inteiro)
+    * Efetue a predição nos dados de teste e retorne a acurária (float)
     
     Test
     -----------
