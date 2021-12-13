@@ -72,31 +72,31 @@ def emparalha_e_normaliza(X_train, y_train, X_test, y_test):
 
     Test
     -----------
-    >>> len(emparalha_e_normaliza(carrega_dados()))
+    >>> len(emparalha_e_normaliza(*carrega_dados()))
     4
     
-    >>> emparalha_e_normaliza(carrega_dados())[0].shape
+    >>> emparalha_e_normaliza(*carrega_dados())[0].shape
     (60000, 28, 28)
 
-    >>> emparalha_e_normaliza(carrega_dados())[0].max()
+    >>> emparalha_e_normaliza(*carrega_dados())[0].max()
     1
 
-    >>> emparalha_e_normaliza(carrega_dados())[0].min()
+    >>> emparalha_e_normaliza(*carrega_dados())[0].min()
     0
 
-    >>> emparalha_e_normaliza(carrega_dados())[1].shape
+    >>> emparalha_e_normaliza(*carrega_dados())[1].shape
     (60000,)
 
-    >>> emparalha_e_normaliza(carrega_dados())[2].shape
+    >>> emparalha_e_normaliza(*carrega_dados())[2].shape
     (10000, 28, 28)
 
-    >>> emparalha_e_normaliza(carrega_dados())[2].max()
+    >>> emparalha_e_normaliza(*carrega_dados())[2].max()
     1
 
-    >>> emparalha_e_normaliza(carrega_dados())[2].min()
+    >>> emparalha_e_normaliza(*carrega_dados())[2].min()
     1
 
-    >>> emparalha_e_normaliza(carrega_dados())[3].shape
+    >>> emparalha_e_normaliza(*carrega_dados())[3].shape
     (10000,)
     ''' 
     retorno = (None, None, None, None)
