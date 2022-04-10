@@ -29,6 +29,11 @@ nome = '' # # coloque aqui o nome completo sem espaços (colocar '_' entre as pa
 ### Seu código termina aqui ###
 
 
+
+# verifica se é primo
+def is_prime()
+
+
 def carrega_dados():
     '''
     Crie uma função que carrega os dados do dataset mnist utilizando o módulo de datasets já disponível 

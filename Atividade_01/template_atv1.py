@@ -15,11 +15,10 @@ Informações sobre o como fazer a atividade:
 ### Seu código inicia aqui ###
 
 nome = 'gustavo_voltani_von_atzingen' # # coloque aqui o nome completo sem espaços (colocar '_' entre as palavras e.g. gustavo_voltani_von_atzingen) no formato de uma string
-CPF = '' # Coloque seu CPF no formato int (sem pontos, traços ou espaços) ex: Se '123.456.789.7':  CPF = 1234567897
+CPF = None # Coloque seu CPF no formato int (sem pontos, traços ou espaços) ex: Se '123.456.789.7':  CPF = 1234567897
 data_nascimento = '' # Coloque sua data de nascimento no formato 'dd/mm/aaaa' (string)
 
 ### Seu código termina aqui ###
-
 
 def progressao_aritmetica(a1, r, n):
     '''
@@ -59,7 +58,7 @@ def soma_pa(a1, r, n):
     '''
     soma = 0
     ### Seu código inicia aqui ###	
-    
+
     ### Seu código termina aqui ###
     return soma
 
