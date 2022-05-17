@@ -1,7 +1,8 @@
 import math
+import numpy as np
 import pandas as pd
+from sklearn.utils import shuffle
 from sklearn.model_selection import train_test_split
-
 
 '''
 Informações sobre o como fazer a atividade:
@@ -121,6 +122,17 @@ def shuffle_split_data(df):
     ### Seu código termina aqui ###
     return X_train, X_test, y_train, y_test
 
+
+def limpa_dataset(df):
+    '''
+    Crie uma função que recebe um dataframe e remove todas as linhas que possuem valores faltando
+    (NaN) e depois disso transforma todas as colunas numéricas em números de 0 a 1.
+    '''
+    df = None
+    ### Seu código inicia aqui ###
+    
+    ### Seu código termina aqui ###
+    return df
 
 if __name__ == '__main__':
     print(entropia(50, 50))
