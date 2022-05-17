@@ -128,7 +128,6 @@ def limpa_dataset(df):
     Crie uma função que recebe um dataframe e remove todas as linhas que possuem valores faltando
     (NaN) e depois disso transforma todas as colunas numéricas em números de 0 a 1.
     '''
-    df = None
     ### Seu código inicia aqui ###
     
     ### Seu código termina aqui ###
