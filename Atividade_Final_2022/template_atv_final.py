@@ -1,9 +1,12 @@
 import numpy as np
+import sklearn
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.utils import shuffle
 import tensorflow as tf
 from tensorflow.keras.datasets import mnist
 from tensorflow.keras.layers import Dense
-from sklearn.utils import shuffle
-
 
 '''
 Informações sobre o como fazer a atividade:
@@ -23,11 +26,64 @@ Informações sobre o como fazer a atividade:
 
 ### Seu código inicia aqui ###
 
-nome = '' # # coloque aqui o nome completo sem espaços (colocar '_' entre as palavras e.g. gustavo_voltani_von_atzingen) no formato de uma string
-        # Mantenha o mesmo nome que você colocou na atividade 1 para facilitar a agregação de dados no final
+nome = ''  # # coloque aqui o nome completo sem espaços (colocar '_' entre as palavras e.g. gustavo_voltani_von_atzingen) no formato de uma string
+           # Mantenha o mesmo nome que você colocou na atividade 1 e 2 para facilitar a agregação de dados no final
+email = '' # Coloque o seu email aqui no formato string como no exemplo
 
 ### Seu código termina aqui ###
 
+def avalia_modelo(resultados_reais, resultados_preditos):
+    '''
+    Crie uma função que avalia os resultados de um modelo e retorna as métricas acurácia, precisão, recall e F1:
+    Ambas as variáveis de entrada (resultados_reais, resultados_preditos) são listas com n elementos e resultados
+    de um teste fictício com as possibilidades 0 (Negativo) e 1 (Positivo).
+    Ps. Os valores dos resultados abaixo estão com arredondamento na segunda casa decimal.
+    
+    
+    Test
+    -----------
+    >>> avalia_modelo([0,0,0,0,1,1,1,1,1,1], 
+                      [0,0,0,1,1,1,1,1,1,1])
+    (0.9, 0.86, 1.0, 0.92)
+    
+    >>> avalia_modelo([0,0,0,0,1,1,1,1,1,1], 
+                      [0,0,0,0,0,0,1,1,1,1])
+    (0.8, 1, 0.67, 0.80) 
+
+    ''' 
+    resultado = [None, None, None, None]
+    ### Seu código inicia aqui ###	
+    
+    ### Seu código termina aqui ###
+    return resultado
+
+def K_vizinhos_proximos(X, y, k):
+    '''
+    Crie uma função que receba X e y (ambos ndarray's) com os dados de um dataset já preparado para utilização 
+    com KNeighborsClassifier da biblioteca sklearn.
+    
+    * Separe os dados em treino e teste, com 20% dos dados randomizados na parte de teste (random_state=137).
+    
+    * Crie um classificador KNeighborsClassifier com k vizinhos
+    
+    * "treine" o classificador com o método KNeighborsClassifier.fit()
+    
+    * Efetue a predição nos dados de teste e retorne a acurária (float)
+    
+    Test
+    -----------
+    >>> K_vizinhos_proximos([[0,0], [1,1], [2,2], [3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10]],
+                            [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1],
+                            3
+                            )
+    1.0   
+    '''
+    acc = None
+    ### Seu código inicia aqui ###
+    
+    ### Seu código termina aqui ###
+    return acc
+    
 
 def carrega_dados():
     '''
@@ -64,7 +120,7 @@ def carrega_dados():
 
 def emparalha_e_normaliza(X_train, y_train, X_test, y_test):
     '''
-    Crie uma função que carrega receba os dados do mnist já gerados na função carrega_dados() e,
+    Crie uma função que carrega receba os dados do mnist (Dica: você pode chamar a função carrega_dados()) e,
     utilizando o método shuffle do sklearn.utils (já importado no início do script), embaralhe os
     dados de treino e teste (separadamente) e depois mude o range dos dados para 0 a 1.
 
@@ -99,6 +155,7 @@ def emparalha_e_normaliza(X_train, y_train, X_test, y_test):
     >>> emparalha_e_normaliza(*carrega_dados())[3].shape
     (10000,)
     ''' 
+    np.random.seed(31415)
     retorno = (None, None, None, None)
     ### Seu código inicia aqui ###	
     
